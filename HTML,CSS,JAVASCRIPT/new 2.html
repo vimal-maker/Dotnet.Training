@@ -1,0 +1,42 @@
+<!doctype>
+<html>
+<head>
+<title>Form validation</title>
+<body onload="validation()">
+<body onload="validation()">
+
+<form name="myForm" method="post">
+<!--<form name="myForm" onsubmit="return validation()">-->
+FirstName:
+<input type ="text" name="fname">
+<br>
+DOB:
+<input type="date" name="DOB" required>
+<br>
+</form>
+
+<button onclick = "validation()">Submit</button>
+
+<style>
+body
+{
+background-image:url('images.jpg');
+color:red;
+}
+<script type="text/javascript">
+
+function validation()
+{
+  var x=document.forms["myForm"]["fname"].value;
+  if(x == "")
+  {
+  alert("please enter some values");
+  }
+   return false;
+}
+
+
+</script>
+</body>
+</html>
+
